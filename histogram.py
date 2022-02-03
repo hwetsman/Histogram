@@ -16,3 +16,7 @@ sd = st.sidebar.slider('sd of Distribution', min_value=1, max_value=5, value=2, 
 size = st.sidebar.slider('N', min_value=1000, max_value=10000, value=5000, step=500)
 
 array = np.random.normal(mean, sd, size)
+
+fig = plt.figure(figsize=(8, 5))
+plt.hist(array)
+st.pyplot(fig)
